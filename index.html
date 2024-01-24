@@ -4,14 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Űrlap gyakorlás</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <from action="#" method="get">
-        <input type="text" name="">
+    <h1>Mozi</h1>
+    <form action="#" method="get">
+        <fieldset>
+        <!-- kereten lévő szöveg -->
+        <legend>Néző adatai</legend>
+        <label for="neve">Név: </label>
+        <input type="text" id="neve" name="nev" value="Kocsi Dorottya" size="10"><br>
+        <label for="kedvenc_film">Kedvenc film: </label>
+        <input type="text" id="kedvenc_film" name="film" value="Idegpálya" size="20">
+        <br>
+        <label for="filmek_szama">Filmek száma/hét: </label>
+        <input type="range" id="filmek_szama" name="film_szam" 
+        oninput="this.form.f_sz.value=this.value">
+        <input type="number" name="f_sz" size="6" oninput="this.form.filmek_szama.value=this.value">
+        <br>
+        <input type="submit" value="Küldés">
+    </fieldset>
 
 
-
-
-    </from>
+    </form>
 </body>
 </html>
